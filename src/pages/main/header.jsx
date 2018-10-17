@@ -43,7 +43,7 @@ class Header extends React.Component {
         },
         {
           label: '个人资料修改',
-          href: '/'
+          href: '/user'
         }
       ]
     }
