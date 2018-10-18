@@ -1,31 +1,28 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { Button, Divider } from 'antd';
-import TopicItem from '../topic-item/topic-item.jsx';
-import './home.less';
-import mockData from './mock';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { Button, Divider } from 'antd'
+import TopicItem from '@/pages/topic-item/topic-item'
+import './home.less'
+import mockData from './mock'
 
 class Home extends Component {
   render() {
     return (
       <div className="home-page">
-        <Header></Header>
+        <Header />
         <Divider />
-        <Main></Main>
+        <Main />
       </div>
     )
   }
 }
-
 
 function Header() {
   return (
     <div className="page__header">
       <span>Top Question</span>
       <Link to="/questions/ask">
-        <Button type="primary">
-          Ask questions
-        </Button>
+        <Button type="primary">Ask questions</Button>
       </Link>
     </div>
   )
@@ -34,16 +31,12 @@ function Main() {
   const itemGroups = mockData.map(item => {
     return (
       <div key={item.id}>
-        <TopicItem item={item}></TopicItem>
+        <TopicItem item={item} />
         <Divider />
       </div>
     )
   })
-  return (
-    <div className="page__main">
-      {itemGroups}
-    </div>
-  )
+  return <div className="page__main">{itemGroups}</div>
 }
 
 // function TopicItem(props) {
@@ -78,5 +71,4 @@ function Main() {
 //   )
 // }
 
-
-export default Home;
+export default Home
