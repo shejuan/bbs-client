@@ -4,7 +4,7 @@ import './login.less'
 
 class Login extends React.Component {
   login = () => {
-    this.props.history.push("/home")
+    this.props.history.push("/")
   }
 
   render() {

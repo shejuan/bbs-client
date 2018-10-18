@@ -10,7 +10,7 @@ class MRoute extends Component {
       <Router>
         <Switch>
           <Route path="/login" component={Login} />
-          <Route path="/home" exact component={App} />
+          <Route path="/" exact component={App} />
         </Switch>
       </Router>
     );

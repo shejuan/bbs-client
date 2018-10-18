@@ -5,7 +5,7 @@ import EditPage from '@/pages/edit/edit'
 import ReplyPage from '@/pages/reply/reply'
 import Home from '@/pages/home/modules/home'
 import { Layout, Menu, Icon } from 'antd'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './main.less'
 
 const { Content, Sider } = Layout
@@ -65,16 +65,16 @@ class Main extends React.Component {
                 minHeight: 'initial'
               }}
             >
-              {/* <Switch> */}
-              <Route path="/" exact component={Home} />
-              <Route path="/edit" component={EditPage} />
-              <Route path="/reply" component={ReplyPage} />
-              <Route path="/questions/ask" component={AskQuestionsPage} />
-              <Route
-                path="/question/detail/:questionId"
-                component={QuestionDetail}
-              />
-              {/* </Switch> */}
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/edit" component={EditPage} />
+                <Route path="/reply" component={ReplyPage} />
+                <Route path="/questions/ask" component={AskQuestionsPage} />
+                <Route
+                  path="/question/detail/:questionId"
+                  component={QuestionDetail}
+                />
+              </Switch>
             </Content>
           </Layout>
           {/* </Layout> */}
