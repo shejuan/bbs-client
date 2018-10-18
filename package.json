@@ -96,6 +96,8 @@
   },
   "devDependencies": {
     "less": "^3.8.1",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.1"
   }
 }
