@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown, Icon } from 'antd'
 import TopNav from '@/components/topnav/topnav'
+import { connect } from 'react-redux'
 import MenuItems from '@/components/menu-items'
 
 class Header extends React.Component {
@@ -59,7 +60,8 @@ class Header extends React.Component {
         </Link>
         <TopNav data={this.state.navData} />
         <div className="header-user">
-          盖伦，您好
+          {this.props.userInfo.name}
+          ，您好
           <div className="user-op">
             <Dropdown overlay={<MenuItems list={this.state.userOp} />}>
               <Link to="/">
@@ -78,4 +80,17 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+function mapStateToProps(state) {
+  return {
+    userInfo: state.userInfo
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {}
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header)
