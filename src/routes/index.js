@@ -1,11 +1,9 @@
-import HomePage from './../pages/home/home';
-// import AskQuestionsPage from './../pages/questions/ask';
+// import HomePage from './../pages/home/home';
+// // import AskQuestionsPage from './../pages/questions/ask';
 
-const routes = [
-  {
-    path: "/",
-    component: HomePage
-  }
-];
+// const routes = [{
+//   path: "/",
+//   component: HomePage
+// }];
 
-export default routes;
+// export default routes;

@@ -1,7 +1,6 @@
 import React from 'react'
 import user from '@/pages/user/userCenter'
 import Home from '@/pages/home/main'
-
 import Header from '@/pages/main/header'
 import { Layout } from 'antd'
 import { Route, Switch } from 'react-router-dom'
@@ -28,8 +27,8 @@ class Main extends React.Component {
               }}
             >
               <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/user" component={user} />
+                <Route path="/home" exact component={Home} />
+                <Route path="/user" exact component={user} />
               </Switch>
             </Content>
           </Layout>
