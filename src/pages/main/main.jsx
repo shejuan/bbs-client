@@ -1,5 +1,6 @@
 import React from 'react'
 import AskQuestionsPage from '@/pages/questions/ask'
+import QuestionDetailPage from '@/pages/questions/detail'
 import EditPage from '@/pages/edit/edit'
 import ReplyPage from '@/pages/reply/reply'
 import Home from '@/pages/home/home'
@@ -74,6 +75,10 @@ class Main extends React.Component {
                   <Route path="/edit" component={EditPage} />
                   <Route path="/reply" component={ReplyPage} />
                   <Route path="/questions/ask" component={AskQuestionsPage} />
+                  <Route
+                    path="/question/detail/:questionId"
+                    component={QuestionDetailPage}
+                  />
                 </Switch>
               </Content>
             </Layout>
