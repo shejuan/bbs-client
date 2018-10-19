@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Tabs } from 'antd';
-import { BrowserRouter as Router} from "react-router-dom";
 import BasicInf from "./modules/basicInf"
 import ContactInt from "./modules/contactInf"
 import Department from "./modules/department"
@@ -15,23 +14,21 @@ function callback(key) {
 class UserMsg extends Component {
   render() {
     return (
-      <Router>
       <div>
         <Tabs defaultActiveKey="1" onChange={callback}>
           <TabPane tab="基本资料" key="1">
-            <BasicInf/>
+            <BasicInf />
           </TabPane>
           <TabPane tab="联系信息" key="2">
-            <ContactInt/>
+            <ContactInt />
           </TabPane>
           <TabPane tab="IT职业技能" key="3">
-            <Department/>
+            <Department />
           </TabPane>
         </Tabs>
-        </div>
-      </Router>
+      </div>
     )
   }
-  
+
 }
 export default UserMsg

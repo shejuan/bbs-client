@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Layout } from 'antd';
 import SiderContent from "./siderContent/index"
 
@@ -29,10 +29,12 @@ class UserCenter extends Component {
                 minHeight: 'initial'
               }}
             >
-              <Route path="/user" exact component={UserMsg} />
-              <Route path="/user/collection" component={Collection} />
-              <Route path="/user/question" component={Question} />
-              <Route path="/user/focus" component={Focus} />
+              <Switch>
+                <Route path="/user" exact component={UserMsg} />
+                <Route path="/user/collection" component={Collection} />
+                <Route path="/user/question" component={Question} />
+                <Route path="/user/focus" component={Focus} />
+              </Switch>
             </Content>
           </Layout>
         </div>

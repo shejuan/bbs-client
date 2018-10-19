@@ -49,7 +49,7 @@ class Header extends React.Component {
       ]
     }
   }
-  loginOut() {
+  loginOut = () => {
     console.log('退出')
   }
   render() {
