@@ -49,15 +49,15 @@ class Header extends React.Component {
       ]
     }
   }
-  loginOut() {
+  loginOut = () => {
     console.log('退出')
   }
   render() {
     return (
       <div className="blog-header">
-        <div className="header-logo flex-center">
+        <Link to="/" className="header-logo flex-center">
           <img alt="logo" src={require('@/assets/images/logo-min.png')} />
-        </div>
+        </Link>
         <TopNav data={this.state.navData} />
         <div className="header-user">
           {this.props.userInfo.name}

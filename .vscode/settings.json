@@ -7,7 +7,6 @@
   },
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "html.format.enable": true,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.alwaysShowStatus": true,
